@@ -20,7 +20,7 @@
 
 # CLARO System - Use Case Documentation
 
-This directory contains detailed use case documentation for the CLARO (transparent financial management) system developed for Tera IV.
+This directory contains detailed use case documentation for the CLARO (transparent financial management) system developed for the Visayas State University - Student Election Board.
 
 ---
 
