@@ -5,10 +5,14 @@ for the Visayas State University - Student Election Board.
 
 **Target:** CL.010.001 (or CL.020.001 for pre-completed projects)
 
-| Internal Release Code | Date Released |
-| :--- | :--- |
-| CL.010.001 | 2025-02-13 |
-| ... | ... |
+| Revision Date | Document Version | Description                                                    | Tracking Notes | Approved By                                          |
+| ------------- | ---------------- | -------------------------------------------------------------- | -------------- | ---------------------------------------------------- |
+| 2026-05-20    | v1.4             | Add dashboard, balance tracking, and activity logging docs     | CM.010.005     | Concoles, Cyril Jade M.<br>_Test Lead_               |
+| 2026-04-27    | v1.3             | Add reporting workflow, archives, and entries docs             | CM.010.004     | Montera, Mhac Alester B.<br>_Lead Developer_         |
+| 2025-03-11    | v1.2             | Add admin controls, activity logs, and reports page docs       | CM.010.003     | Concoles, Cyril Jade M.<br>_Test Lead_               |
+| 2025-03-02    | v1.1             | Add navigation, authentication, and sidebar docs               | CM.010.002     | Montera, Mhac Alester B.<br>_Lead Developer_         |
+| 2025-02-13    | v1.0             | First document version                                         | CM.010.001     | Tan, Ron Nicolas J.<br>_Project Manager_             |
+| ...           | ...              | ...                                                            | ...            | ...                                                  |
 
 ---
 
@@ -24,45 +28,14 @@ for the Visayas State University - Student Election Board.
 
 ---
 
-## ## CL.010.001 Release Notes
+## Use Case Scenarios
 
-\*\*\* Account Balance Overview
-
-- Add Account Balance Overview use case document covering real-time balance display across total balance, cash on bank, cash on hand, collectibles, and fines cards.
-- Document initial balance setup flow for semester-opening configuration of cash on bank, cash on hand, and collectibles.
-- Document bank deposit and withdrawal recording via calculator dialog with undo support.
-- Document collectibles management including adding amounts and undo functionality.
-- Document fines management including fine-per-student configuration and transfer of uncollected fines to collectibles.
-
-\*\*\* Transaction Ledger
-
-- Add Transaction Ledger use case document covering complete display of all recorded financial transactions.
-- Document filtering by date range, type, and category, search functionality, and CSV/PDF export.
-
-\*\*\* Transaction Entry
-
-- Add Transaction Entry use case document covering income transaction recording with optional receipt upload.
-- Document expense transaction recording with mandatory receipt upload and duplicate detection.
-- Document editing of existing transaction entries with change logging.
-
-\*\*\* Activity Monitoring
-
-- Add Activity Monitoring use case document covering administrative viewing of all user activity logs.
-- Document automatic activity logging on user login, logout, transaction entry, and transaction modification.
-- Document suspicious activity detection and administrator alert flow.
-
-\*\*\* Public Financial Report
-
-- Add Public Financial Report use case document covering no-authentication public access to semester financial summaries.
-- Document historical public report browsing and shareable report link generation.
-- Specify included and excluded report content to distinguish public summaries from internal transaction data.
-
-\*\*\* Financial Report Generation
-
-- Add Financial Report Generation use case document covering public PDF download and detailed internal report generation.
-- Document report publishing workflow that sanitizes internal reports for public release.
-- Document scheduled automatic report generation and batch multi-report download.
-- Specify public and internal PDF report format standards.
+- [Account Balance Overview](account-balance-overview.md)
+- [Transaction Ledger](transaction-ledger.md)
+- [Transaction Entry](transaction-entry.md)
+- [Activity Monitoring](activity-monitoring.md)
+- [Public Financial Report](public-financial-report.md)
+- [Financial Report Generation](financial-report-generation.md)
 
 ---
 
