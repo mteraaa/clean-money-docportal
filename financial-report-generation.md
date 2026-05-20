@@ -7,9 +7,10 @@
 | 2025-02-13    | v1.0             | First document version | CL.010.001     | Tan, Ron Nicolas<br>_Project Manager_ |
 | ...           | ...              | ...                    | ...            | ...                                   |
 
-## Site Map
+**Site Map**
 
 - [Project Homepage](README.md)
+- [Account Balance Overview](account-balance-overview.md)
 - [Transaction Ledger](transaction-ledger.md)
 - [Transaction Entry](transaction-entry.md)
 - [Activity Monitoring](activity-monitoring.md)
@@ -18,7 +19,13 @@
 
 ---
 
+[Project Homepage](README.md) > Financial Report Generation
+
+---
+
 # Financial Report Generation
+
+The Financial Report Generation module enables authorized users to produce, preview, and publish financial reports in PDF format. It supports on-demand generation of detailed internal reports for review and sanitized public summaries for transparency, as well as scheduled automatic report generation for consistent semester-end reporting.
 
 ## Use Case Scenarios
 
@@ -111,4 +118,4 @@
 
 ---
 
-_© 2026 Tera IV_
+<div align="center">© 2026 Tera IV</div>

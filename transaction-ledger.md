@@ -7,9 +7,10 @@
 | 2025-02-13    | v1.0             | First document version | CL.010.001     | Tan, Ron Nicolas<br>_Project Manager_ |
 | ...           | ...              | ...                    | ...            | ...                                   |
 
-## Site Map
+**Site Map**
 
 - [Project Homepage](README.md)
+- [Account Balance Overview](account-balance-overview.md)
 - [Transaction Ledger](transaction-ledger.md)
 - [Transaction Entry](transaction-entry.md)
 - [Activity Monitoring](activity-monitoring.md)
@@ -18,7 +19,13 @@
 
 ---
 
+[Project Homepage](README.md) > Transaction Ledger
+
+---
+
 # Transaction Ledger
+
+The Transaction Ledger provides a complete, real-time display of all recorded financial transactions within the CLARO system. Authorized users can view, filter by date range or category, search for specific entries, and export the full transaction history for auditing and accountability purposes.
 
 ## Use Case Scenario
 
@@ -39,4 +46,4 @@
 
 ---
 
-_© 2026 Tera IV_
+<div align="center">© 2026 Tera IV</div>

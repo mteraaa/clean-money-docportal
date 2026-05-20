@@ -7,9 +7,10 @@
 | 2025-02-13    | v1.0             | First document version | CL.010.001     | Tan, Ron Nicolas<br>_Project Manager_ |
 | ...           | ...              | ...                    | ...            | ...                                   |
 
-## Site Map
+**Site Map**
 
 - [Project Homepage](README.md)
+- [Account Balance Overview](account-balance-overview.md)
 - [Transaction Ledger](transaction-ledger.md)
 - [Transaction Entry](transaction-entry.md)
 - [Activity Monitoring](activity-monitoring.md)
@@ -18,7 +19,13 @@
 
 ---
 
+[Project Homepage](README.md) > Activity Monitoring
+
+---
+
 # Activity Monitoring
+
+The Activity Monitoring module automatically records and displays a comprehensive log of all user actions within the CLARO system, including logins, logouts, transaction entries, and modifications. It enables administrators to review system usage, maintain accountability, and detect suspicious behavior.
 
 ## Use Case Scenarios
 
@@ -101,4 +108,4 @@
 
 ---
 
-_© 2026 Tera IV_
+<div align="center">© 2026 Tera IV</div>

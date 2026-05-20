@@ -7,9 +7,10 @@
 | 2025-02-13    | v1.0             | First document version | CL.010.001     | Tan, Ron Nicolas<br>_Project Manager_ |
 | ...           | ...              | ...                    | ...            | ...                                   |
 
-## Site Map
+**Site Map**
 
 - [Project Homepage](README.md)
+- [Account Balance Overview](account-balance-overview.md)
 - [Transaction Ledger](transaction-ledger.md)
 - [Transaction Entry](transaction-entry.md)
 - [Activity Monitoring](activity-monitoring.md)
@@ -18,7 +19,13 @@
 
 ---
 
+[Project Homepage](README.md) > Transaction Entry
+
+---
+
 # Transaction Entry
+
+The Transaction Entry feature allows authorized users to record new financial transactions — both income and expenses. Each entry captures key details such as amount, date, category, description, and an optional or required receipt upload for full accountability and audit trail compliance.
 
 ## Use Case Scenarios
 
@@ -65,4 +72,4 @@
 
 ---
 
-_© 2026 Tera IV_
+<div align="center">© 2026 Tera IV</div>

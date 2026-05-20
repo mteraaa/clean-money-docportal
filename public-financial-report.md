@@ -7,9 +7,10 @@
 | 2025-02-13    | v1.0             | First document version | CL.010.001     | Tan, Ron Nicolas<br>_Project Manager_ |
 | ...           | ...              | ...                    | ...            | ...                                   |
 
-## Site Map
+**Site Map**
 
 - [Project Homepage](README.md)
+- [Account Balance Overview](account-balance-overview.md)
 - [Transaction Ledger](transaction-ledger.md)
 - [Transaction Entry](transaction-entry.md)
 - [Activity Monitoring](activity-monitoring.md)
@@ -18,7 +19,13 @@
 
 ---
 
+[Project Homepage](README.md) > Public Financial Report
+
+---
+
 # Public Financial Report
+
+The Public Financial Report provides summarized semester financial data accessible to the general public without requiring authentication. Published reports show aggregate income and expense figures by category while omitting sensitive transaction details, enabling the organization to uphold transparency and public accountability.
 
 ## Use Case Scenarios
 
@@ -87,4 +94,4 @@
 
 ---
 
-_© 2026 Tera IV_
+<div align="center">© 2026 Tera IV</div>
