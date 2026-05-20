@@ -2,10 +2,14 @@
 
 **Target:** CL.010.001 (or CL.020.001 for pre-completed projects)
 
-| Revision Date | Document Version | Description            | Tracking Notes | Approved By                           |
-| ------------- | ---------------- | ---------------------- | -------------- | ------------------------------------- |
-| 2025-02-13    | v1.0             | First document version | CL.010.001     | Tan, Ron Nicolas<br>_Project Manager_ |
-| ...           | ...              | ...                    | ...            | ...                                   |
+| Revision Date | Document Version | Description                                                    | Tracking Notes | Approved By                                          |
+| ------------- | ---------------- | -------------------------------------------------------------- | -------------- | ---------------------------------------------------- |
+| 2026-05-20    | v1.4             | Add dashboard, balance tracking, and activity logging docs     | CM.010.005     | Concoles, Cyril Jade M.<br>_Test Lead_               |
+| 2026-04-27    | v1.3             | Add reporting workflow, archives, and entries docs             | CM.010.004     | Montera, Mhac Alester B.<br>_Lead Developer_         |
+| 2025-03-11    | v1.2             | Add admin controls, activity logs, and reports page docs       | CM.010.003     | Concoles, Cyril Jade M.<br>_Test Lead_               |
+| 2025-03-02    | v1.1             | Add navigation, authentication, and sidebar docs               | CM.010.002     | Montera, Mhac Alester B.<br>_Lead Developer_         |
+| 2025-02-13    | v1.0             | First document version                                         | CM.010.001     | Tan, Ron Nicolas J.<br>_Project Manager_             |
+| ...           | ...              | ...                                                            | ...            | ...                                                  |
 
 **Site Map**
 
