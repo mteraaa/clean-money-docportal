@@ -1,11 +1,16 @@
 # Clean Money
 
+CLARO is a web-based transparent financial management system
+for the Visayas State University - Student Election Board.
+
 **Target:** CL.010.001 (or CL.020.001 for pre-completed projects)
 
-| Revision Date | Document Version | Description            | Tracking Notes | Approved By                           |
-| ------------- | ---------------- | ---------------------- | -------------- | ------------------------------------- |
-| 2025-02-13    | v1.0             | First document version | CL.010.001     | Tan, Ron Nicolas<br>_Project Manager_ |
-| ...           | ...              | ...                    | ...            | ...                                   |
+| Internal Release Code | Date Released |
+| :--- | :--- |
+| CL.010.001 | 2025-02-13 |
+| ... | ... |
+
+---
 
 **Site Map**
 
@@ -19,60 +24,51 @@
 
 ---
 
-# CLARO System - Use Case Documentation
+## ## CL.010.001 Release Notes
 
-This directory contains detailed use case documentation for the CLARO (transparent financial management) system developed for the Visayas State University - Student Election Board.
+\*\*\* Account Balance Overview
 
----
+- Add Account Balance Overview use case document covering real-time balance display across total balance, cash on bank, cash on hand, collectibles, and fines cards.
+- Document initial balance setup flow for semester-opening configuration of cash on bank, cash on hand, and collectibles.
+- Document bank deposit and withdrawal recording via calculator dialog with undo support.
+- Document collectibles management including adding amounts and undo functionality.
+- Document fines management including fine-per-student configuration and transfer of uncollected fines to collectibles.
 
-## CLARO Financial Management Module
+\*\*\* Transaction Ledger
 
-The CLARO Financial Management module provides comprehensive tools for transparent, accountable handling of student organization finances. It combines transaction tracking, automated activity logging, and public reporting to maintain electoral integrity and financial transparency throughout the academic period.
+- Add Transaction Ledger use case document covering complete display of all recorded financial transactions.
+- Document filtering by date range, type, and category, search functionality, and CSV/PDF export.
 
-## Use Case Scenarios
+\*\*\* Transaction Entry
 
-- [Transaction Ledger](transaction-ledger.md)
-- [Transaction Entry](transaction-entry.md)
-- [Activity Monitoring](activity-monitoring.md)
-- [Public Financial Report](public-financial-report.md)
-- [Financial Report Generation](financial-report-generation.md)
+- Add Transaction Entry use case document covering income transaction recording with optional receipt upload.
+- Document expense transaction recording with mandatory receipt upload and duplicate detection.
+- Document editing of existing transaction entries with change logging.
 
----
+\*\*\* Activity Monitoring
 
-## Key Features
+- Add Activity Monitoring use case document covering administrative viewing of all user activity logs.
+- Document automatic activity logging on user login, logout, transaction entry, and transaction modification.
+- Document suspicious activity detection and administrator alert flow.
 
-- **Real-time Transaction Recording**: Complete tracking of all income and expense transactions with receipt management
-- **Automated Activity Logging**: Comprehensive tracking of all user activities for integrity reviews
-- **Public Transparency**: Accessible financial summaries without exposing sensitive transaction details
-- **PDF Report Generation**: Downloadable financial reports for public and internal use
-- **Audit Trail**: Complete tracking of all financial activities and modifications
+\*\*\* Public Financial Report
 
----
+- Add Public Financial Report use case document covering no-authentication public access to semester financial summaries.
+- Document historical public report browsing and shareable report link generation.
+- Specify included and excluded report content to distinguish public summaries from internal transaction data.
 
-## Document Structure
+\*\*\* Financial Report Generation
 
-Each use case document contains:
-
-- **Use Case Scenario Table:** Summary, preconditions, postconditions, basic flow, and exceptions
-- **Related Use Cases:** Cross-references to connected features
-
----
-
-## System Overview
-
-**CLARO** is a web-based financial management system designed to promote transparency and accountability in Tera IV's financial operations. The system balances the need for public transparency with the protection of sensitive transaction details.
-
-### Key Principles
-
-- **Transparency:** Public access to financial summaries
-- **Accountability:** Comprehensive activity logging
-- **Security:** Protected detailed transaction information
-- **Accessibility:** User-friendly interface for authorized and public users
+- Add Financial Report Generation use case document covering public PDF download and detailed internal report generation.
+- Document report publishing workflow that sanitizes internal reports for public release.
+- Document scheduled automatic report generation and batch multi-report download.
+- Specify public and internal PDF report format standards.
 
 ---
 
-_Last Updated: February 13, 2026_  
-_System: CLARO - Transparent Web-based Financial Management System for the VSU-SEB_
+### Important Links:
+
+- _Design Specs:_ [https://github.com/...](https://github.com/...)
 
 ---
 
