@@ -29,86 +29,50 @@
 
 # Activity Monitoring
 
-The Activity Monitoring module automatically records and displays a comprehensive log of all user actions within the CLARO system, including logins, logouts, transaction entries, and modifications. It enables administrators to review system usage, maintain accountability, and detect suspicious behavior.
+The Activity Monitoring module displays a chronological log of all recorded system actions for the user's organization. The Activity Logs page shows the most recent 200 entries, each with a description, time, and date. Logs are scoped to the user's faculty or campus organization and are recorded automatically by the system whenever key actions are performed.
 
 ## Use Case Scenarios
 
-### Scenario 1: Viewing User Activity Logs
+### Scenario 1: Viewing the Activity Log
 
-| Use Case Name      | Viewing User Activity Logs                                                                                                                                                                                                                                                                                                                    |
-| ------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **Summary**        | The system displays all recorded user activities including login/logout, transaction entries, and modifications for audit purposes.                                                                                                                                                                                                           |
-| **Preconditions**  | User is authenticated with administrative privileges. Activity logs exist in the system.                                                                                                                                                                                                                                                      |
-| **Postconditions** | Complete activity history is displayed. User has visibility into all system activities for accountability.                                                                                                                                                                                                                                    |
-| **Basic Flow**     | **Actor Action**<br><br>1. Navigate to Activity Monitoring page.<br>2. View activity log table showing timestamp, user ID/username, activity type, activity details, and IP address.<br>3. Filter activities by date range, user, or activity type if needed.<br>4. Search for specific activities.<br>5. Export activity logs to CSV or PDF. |
-| **Exceptions**     | 1. If filter criteria returns no results, the system displays "No activities found" message.                                                                                                                                                                                                                                                  |
-
----
-
-### Scenario 2: Automatic Activity Logging on Login
-
-| Use Case Name      | Automatic Activity Logging on Login                                                                                                                                                                                                                                     |
-| ------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **Summary**        | The system automatically records user login activity with timestamp and IP address for security tracking.                                                                                                                                                               |
-| **Preconditions**  | User has valid credentials.                                                                                                                                                                                                                                             |
-| **Postconditions** | Login activity is recorded in activity log. User session is active.                                                                                                                                                                                                     |
-| **Basic Flow**     | **Actor Action**<br><br>1. Enter username and password.<br>2. System validates and authenticates successfully.<br>3. System automatically records login activity with user ID, timestamp, activity type "Login", and IP address.<br>4. User is redirected to dashboard. |
-| **Exceptions**     | None.                                                                                                                                                                                                                                                                   |
+| Use Case Name      | Viewing the Activity Log                                                                                                                                                                                                                                 |
+| ------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Summary**        | The system displays a table of the 200 most recent activity log entries for the user's organization, ordered from most recent to oldest.                                                                                                                 |
+| **Preconditions**  | User is authenticated.                                                                                                                                                                                                                                   |
+| **Postconditions** | The user can review recent system activity for their organization.                                                                                                                                                                                       |
+| **Basic Flow**     | **Actor Action**<br><br>1. Navigate to the Activity Logs page from the sidebar.<br>2. View the activity log table with columns: Description, Time, and Date.<br>3. Entries are ordered by most recent first.<br>4. On smaller screens, the Time and Date columns are collapsed and shown inline under the Description. |
+| **Exceptions**     | 1. If no activity has been recorded yet, the table displays "No activity recorded yet."                                                                                                                                                                  |
 
 ---
 
-### Scenario 3: Automatic Activity Logging on Logout
+### Scenario 2: Automatic Logging on Entry Creation
 
-| Use Case Name      | Automatic Activity Logging on Logout                                                                                                                                                            |
-| ------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **Summary**        | The system automatically records user logout activity for session tracking.                                                                                                                     |
-| **Preconditions**  | User is currently logged in.                                                                                                                                                                    |
-| **Postconditions** | Logout activity is recorded in activity log. User session is terminated.                                                                                                                        |
-| **Basic Flow**     | **Actor Action**<br><br>1. Click logout button.<br>2. System automatically records logout activity with user ID, timestamp, and activity type "Logout".<br>3. User is redirected to login page. |
-| **Exceptions**     | None.                                                                                                                                                                                           |
-
----
-
-### Scenario 4: Automatic Activity Logging on Transaction Entry
-
-| Use Case Name      | Automatic Activity Logging on Transaction Entry                                                                                                                                                                                                                       |
-| ------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **Summary**        | The system automatically records when transactions are created for audit trail purposes.                                                                                                                                                                              |
-| **Preconditions**  | User is authenticated and creating a transaction.                                                                                                                                                                                                                     |
-| **Postconditions** | Transaction entry activity is recorded. Activity log is updated with transaction creation details.                                                                                                                                                                    |
-| **Basic Flow**     | **Actor Action**<br><br>1. Submit a new transaction.<br>2. System saves the transaction successfully.<br>3. System automatically records activity with user ID, timestamp, activity type "Transaction Entry", and details including transaction ID, type, and amount. |
-| **Exceptions**     | None.                                                                                                                                                                                                                                                                 |
+| Use Case Name      | Automatic Logging on Entry Creation                                                                                                                                                                                                     |
+| ------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Summary**        | The system automatically records an activity log entry whenever a new income or expense transaction is added.                                                                                                                           |
+| **Preconditions**  | User is authenticated and submits a new entry through the Add Entry sheet.                                                                                                                                                               |
+| **Postconditions** | An activity log entry is created with a description in the format: "Added ₱[amount] to Income/Expenses for [description]".                                                                                                             |
+| **Basic Flow**     | **Actor Action**<br><br>1. User saves a new entry via the Add Entry sheet.<br>2. The system inserts the entry into the database.<br>3. The system automatically records an activity log with the entry amount, category, and description.<br>4. The log appears on the Activity Logs page. |
+| **Exceptions**     | None.                                                                                                                                                                                                                                   |
 
 ---
 
-### Scenario 5: Automatic Activity Logging on Transaction Modification
+### Scenario 3: Automatic Logging on Balance Updates
 
-| Use Case Name      | Automatic Activity Logging on Transaction Modification                                                                                                                                                                                                                                                          |
-| ------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **Summary**        | The system automatically records transaction modifications with details of changed fields for complete audit trail.                                                                                                                                                                                             |
-| **Preconditions**  | User is authenticated and editing an existing transaction.                                                                                                                                                                                                                                                      |
-| **Postconditions** | Transaction modification activity is recorded. Activity log contains complete audit trail of changes.                                                                                                                                                                                                           |
-| **Basic Flow**     | **Actor Action**<br><br>1. Modify an existing transaction.<br>2. System updates the transaction successfully.<br>3. System automatically records activity with user ID, timestamp, activity type "Transaction Modification", and details including transaction ID, fields modified, old values, and new values. |
-| **Exceptions**     | None.                                                                                                                                                                                                                                                                                                           |
-
----
-
-### Scenario 6: Detecting Suspicious Activity
-
-| Use Case Name      | Detecting Suspicious Activity                                                                                                                                                                                                                                                                                                                                                                    |
-| ------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| **Summary**        | The system monitors activity logs for suspicious patterns and flags them for administrator review.                                                                                                                                                                                                                                                                                               |
-| **Preconditions**  | Activity monitoring system is active. Unusual patterns are detected.                                                                                                                                                                                                                                                                                                                             |
-| **Postconditions** | Suspicious activities are identified and flagged. Administrator is alerted to potential security issues.                                                                                                                                                                                                                                                                                         |
-| **Basic Flow**     | **Actor Action**<br><br>1. System continuously monitors activity logs.<br>2. System detects suspicious patterns (multiple failed login attempts, unusual transaction modifications, access attempts outside normal hours).<br>3. System flags suspicious activities in the activity log.<br>4. Administrator reviews flagged activities.<br>5. Administrator takes appropriate action if needed. |
-| **Exceptions**     | None.                                                                                                                                                                                                                                                                                                                                                                                            |
+| Use Case Name      | Automatic Logging on Balance Updates                                                                                                                                                                                                                                                                         |
+| ------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| **Summary**        | The system automatically records an activity log entry whenever a balance action is performed, including bank deposits, withdrawals, interest additions, and collectibles additions.                                                                                                                         |
+| **Preconditions**  | User is authenticated and performs a balance action from the Dashboard balance cards.                                                                                                                                                                                                                        |
+| **Postconditions** | An activity log entry is created describing the specific action and amount. The log appears on the Activity Logs page.                                                                                                                                                                                       |
+| **Basic Flow**     | **Actor Action**<br><br>The system logs the following actions automatically:<br>- **Deposit:** "Deposited ₱[amount] to Cash on Bank"<br>- **Withdrawal:** "Withdrew ₱[amount] from Cash on Bank"<br>- **Interest:** "Added ₱[amount] Interest Earnings to Cash on Bank"<br>- **Collectibles:** "Added ₱[amount] to Collectibles"<br>- **Fines to Collectibles:** "Added ₱[amount] to Collectibles" (from fines transfer) |
+| **Exceptions**     | 1. If a balance action is undone, the corresponding activity log entry is deleted from the database.                                                                                                                                                                                                         |
 
 ---
 
 ## Related Use Cases
 
 - [Transaction Entry](transaction-entry.md)
-- [Authentication](authentication.md) _(if applicable)_
+- [Account Balance Overview](account-balance-overview.md)
 
 ---
 

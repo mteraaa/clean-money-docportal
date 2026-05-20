@@ -29,66 +29,43 @@
 
 # Public Financial Report
 
-The Public Financial Report provides summarized semester financial data accessible to the general public without requiring authentication. Published reports show aggregate income and expense figures by category while omitting sensitive transaction details, enabling the organization to uphold transparency and public accountability.
+The Public Financial Report page lists all published financial reports for the user's organization. Reports are stored in the organization's storage bucket (Faculties or Campus SEB) and are accessed via time-limited signed URLs. Authorized users can view, open, and delete published reports from this page.
 
 ## Use Case Scenarios
 
-### Scenario 1: Public Access to Financial Summary
+### Scenario 1: Viewing Published Reports
 
-| Use Case Name      | Public Access to Financial Summary                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
-| ------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **Summary**        | The system provides public access to semester financial reports showing summarized income, expenses, and budget allocation without detailed transaction information.                                                                                                                                                                                                                                                                                                               |
-| **Preconditions**  | Financial report for the previous semester has been generated. Report has been published by authorized users.                                                                                                                                                                                                                                                                                                                                                                      |
-| **Postconditions** | Public user has access to high-level financial information. Transparency is maintained while protecting detailed transaction data.                                                                                                                                                                                                                                                                                                                                                 |
-| **Basic Flow**     | **Actor Action**<br><br>1. Visit the CLARO public page (no login required).<br>2. Navigate to "Financial Reports" or "Transparency" section.<br>3. View list of available public financial reports by semester.<br>4. Select the report to view.<br>5. View the public financial report showing semester/period covered, total income, total expenses, budget allocation by category, current balance, and key highlights.<br>6. View the report in web format or download as PDF. |
-| **Exceptions**     | 1. If no public reports have been published, the system displays a message indicating reports will be available soon.                                                                                                                                                                                                                                                                                                                                                              |
-
----
-
-### Scenario 2: Viewing Historical Public Reports
-
-| Use Case Name      | Viewing Historical Public Reports                                                                                                                                                                                                                                                                                                     |
-| ------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **Summary**        | The system allows users to browse and view financial reports from previous semesters for historical transparency.                                                                                                                                                                                                                     |
-| **Preconditions**  | Multiple semester reports are available.                                                                                                                                                                                                                                                                                              |
-| **Postconditions** | User has access to historical financial transparency data. Organization demonstrates ongoing commitment to transparency.                                                                                                                                                                                                              |
-| **Basic Flow**     | **Actor Action**<br><br>1. Access public financial reports section.<br>2. View chronological list of available reports showing semester/year, date published, and preview of key figures.<br>3. Browse through historical reports.<br>4. Select a specific semester to view.<br>5. Compare data across different semesters if needed. |
-| **Exceptions**     | None.                                                                                                                                                                                                                                                                                                                                 |
+| Use Case Name      | Viewing Published Reports                                                                                                                                                                                                                                              |
+| ------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Summary**        | The Reports page displays a list of all published financial report files for the user's organization, ordered by publication date from most recent to oldest.                                                                                                         |
+| **Preconditions**  | User is authenticated. At least one report has been published for the organization.                                                                                                                                                                                    |
+| **Postconditions** | User can see all published reports with their titles and publication dates.                                                                                                                                                                                            |
+| **Basic Flow**     | **Actor Action**<br><br>1. Navigate to the Reports page from the sidebar.<br>2. View the list of published reports showing each report's title and publication date.<br>3. Reports are ordered by publication date, most recent first.<br>4. Each report is accessible via a signed URL valid for one hour. |
+| **Exceptions**     | 1. If no reports have been published yet, the table is empty.                                                                                                                                                                                                         |
 
 ---
 
-### Scenario 3: Sharing Public Financial Report
+### Scenario 2: Opening a Published Report
 
-| Use Case Name      | Sharing Public Financial Report                                                                                                                                                                                                                         |
-| ------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **Summary**        | The system provides shareable links to financial reports for easy distribution without authentication requirements.                                                                                                                                     |
-| **Preconditions**  | User is viewing a public financial report.                                                                                                                                                                                                              |
-| **Postconditions** | Report link is shared with others. Public accessibility is maintained.                                                                                                                                                                                  |
-| **Basic Flow**     | **Actor Action**<br><br>1. View a public financial report.<br>2. Click "Share" button.<br>3. Copy the shareable link provided by the system.<br>4. Share link via social media or messaging.<br>5. Recipients access the report without authentication. |
-| **Exceptions**     | None.                                                                                                                                                                                                                                                   |
+| Use Case Name      | Opening a Published Report                                                                                                                                                                                                           |
+| ------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| **Summary**        | The system allows authorized users to open and view a published report file directly from the Reports page.                                                                                                                         |
+| **Preconditions**  | User is authenticated. A published report is available in the list.                                                                                                                                                                  |
+| **Postconditions** | The report file is opened via its signed URL for viewing or downloading.                                                                                                                                                             |
+| **Basic Flow**     | **Actor Action**<br><br>1. On the Reports page, click on a report entry.<br>2. The system opens the report file using its signed URL. PDF files are displayed inline; image files are previewed in a viewer dialog.<br>3. The user can download the file directly from the viewer or browser. |
+| **Exceptions**     | 1. If the signed URL has expired (after one hour), access to the file will fail. The user must reload the Reports page to generate a fresh signed URL.                                                                               |
 
 ---
 
-## Report Content Specifications
+### Scenario 3: Deleting a Published Report
 
-### Included in Public Report:
-
-- **Summary Period:** Semester/year covered
-- **Total Income:** Aggregate amount by broad categories
-- **Total Expenses:** Aggregate amount by broad categories
-- **Budget Breakdown:** Percentage or total allocation per category (Events, Operations, Projects, etc.)
-- **Opening Balance:** Balance at start of period
-- **Closing Balance:** Balance at end of period
-- **Key Highlights:** Major projects funded, significant events, or financial milestones
-
-### Excluded from Public Report:
-
-- Individual transaction details
-- Specific payee/payer names
-- Exact transaction dates and times
-- Receipt images
-- User information who entered transactions
-- Detailed line-item descriptions
+| Use Case Name      | Deleting a Published Report                                                                                                                                                                                                                                    |
+| ------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Summary**        | The system allows authorized users to delete one or more published reports, removing both the file from storage and the record from the database.                                                                                                              |
+| **Preconditions**  | User is authenticated. At least one report is listed on the Reports page.                                                                                                                                                                                      |
+| **Postconditions** | The selected report files are removed from the storage bucket. The corresponding records are deleted from the reports table. The Reports page list is updated.                                                                                                 |
+| **Basic Flow**     | **Actor Action**<br><br>1. On the Reports page, enter select mode.<br>2. Select one or more reports to delete.<br>3. Click the delete action.<br>4. The system removes the selected files from the storage bucket and deletes their database records.<br>5. The reports list refreshes to reflect the deletion. |
+| **Exceptions**     | None.                                                                                                                                                                                                                                                          |
 
 ---
 
